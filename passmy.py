@@ -25,7 +25,8 @@ def generate_password(nr_letters, nr_symbols, nr_numbers):
     random.shuffle(password_list)
 
     password = "".join(password_list)
-    print(f"Your random password is: {password}")
+    print(f"""
+Your random password is: {password}""")
 
 def check_password_strength(password):
     # Define criteria for password strength
@@ -38,8 +39,12 @@ def check_password_strength(password):
     # Check if all criteria are met
     if length_ok and has_uppercase and has_lowercase and has_digit and has_symbol:
         print("The password is strong.")
+        input(r"""
+              Press Enter To Exit""")
     else:
         print("The password is weak. Please make sure it contains at least 8 characters, including uppercase and lowercase letters, numbers, and symbols.")
+        input(r"""
+              Press Enter To Exit""")
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Password Tool")
@@ -82,15 +87,20 @@ def main():
         show_menu()
         option = input("Choose an option >> ")
         if option == '1':
-            nr_letters = int(input("How many letters would you like in your password? "))
-            nr_symbols = int(input("How many symbols would you like? "))
-            nr_numbers = int(input("How many numbers would you like? "))
+            nr_letters = int(input(r"""
+How many letters would you like in your password? """))
+            nr_symbols = int(input(r"""
+How many symbols would you like? """))
+            nr_numbers = int(input(r"""
+How many numbers would you like? """))
             generate_password(nr_letters, nr_symbols, nr_numbers)
         elif option == '2':
-            password = input("Enter the password: ")
+            password = input(r"""
+Enter the password: """)
             check_password_strength(password)
         else:
-            print("Invalid option.")
+            print(r"""
+Invalid option.""")
 
 if __name__ == "__main__":
     main()
