@@ -1,24 +1,70 @@
 # PassMaker
 
-This Python script serves as a versatile tool for enhancing online security. It offers two essential functionalities:
+PassMaker is a Python-based password generator and strength checker tool that allows you to generate strong passwords and check the strength of existing passwords.
 
-1. **Password Generator**: Generate strong, random passwords tailored to your specifications, including length and character composition.
+## Features
 
-2. **Password Strength Checker**: Evaluate the strength of your existing passwords based on criteria such as length, presence of uppercase and lowercase letters, numbers, and symbols.
+- Generate random passwords with custom lengths and compositions of letters, symbols, and numbers.
+- Check the strength of passwords based on criteria such as length, uppercase letters, lowercase letters, numbers, and symbols.
 
-## Usage
+## Getting Started
 
-1. **Generate Password**:
-   - Use the command `-g` or `--generate` to generate a password.
-   - Specify the number of letters, symbols, and numbers using `-l`, `-s`, and `-n` respectively.
-   - Example: `python passmaker.py -g -l 8 -s 2 -n 3`
+### Prerequisites
 
-2. **Check Password Strength**:
-   - Use the command `-c` or `--check` followed by the password to check its strength.
-   - Example: `python passmaker.py -c mypassword123`
+- Python 3.x
 
-If no command-line arguments are provided, the script will display a menu screen allowing you to choose the desired option interactively.
+### Installation
 
-## Contributions
+1. Clone the repository:
 
-Contributions and feedback are welcome! Feel free to fork the repository, make improvements, and submit pull requests.
+    ```bash
+    git clone https://github.com/mohamedemam4078/passmaker.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd passmaker
+    ```
+
+### Usage
+
+#### Generating Passwords
+
+To generate a password, use the following command:
+
+```bash
+python passmaker.py -g -l <number_of_letters> -s <number_of_symbols> -n <number_of_numbers>
+```
+
+Example:
+
+```bash
+python passmaker.py -g -l 8 -s 2 -n 2
+```
+
+This will generate a password with 8 letters, 2 symbols, and 2 numbers.
+
+#### Checking Password Strength
+
+To check the strength of a password, use the following command:
+
+```bash
+python passmaker.py -c <password>
+```
+
+Example:
+
+```bash
+python passmaker.py -c StrongPassword123!
+```
+
+This will check the strength of the password "StrongPassword123!".
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
