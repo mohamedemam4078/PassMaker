@@ -27,6 +27,8 @@ def generate_password(nr_letters, nr_symbols, nr_numbers):
     password = "".join(password_list)
     print(f"""
 Your random password is: {password}""")
+    input(r"""
+<< Press Enter To Exit >>""")
 
 def check_password_strength(password):
     # Define criteria for password strength
@@ -40,11 +42,11 @@ def check_password_strength(password):
     if length_ok and has_uppercase and has_lowercase and has_digit and has_symbol:
         print("The password is strong.")
         input(r"""
-              Press Enter To Exit""")
+              << Press Enter To Exit >>""")
     else:
         print("The password is weak. Please make sure it contains at least 8 characters, including uppercase and lowercase letters, numbers, and symbols.")
         input(r"""
-              Press Enter To Exit""")
+Press Enter To Exit""")
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Password Tool")
