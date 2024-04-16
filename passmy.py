@@ -49,13 +49,14 @@ def check_password_strength(password):
 << Press Enter To Exit >>""")
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Password Tool")
+    parser = argparse.ArgumentParser(description="Pass.My")
     parser.add_argument("-g", "--generate", action="store_true", help="Generate a password")
     parser.add_argument("-c", "--check", action="store", help="Check the strength of a password")
     parser.add_argument("-l", "--letters", type=int, help="Number of letters in the generated password")
     parser.add_argument("-s", "--symbols", type=int, help="Number of symbols in the generated password")
     parser.add_argument("-n", "--numbers", type=int, help="Number of numbers in the generated password")
     return parser.parse_args()
+
 
 def show_menu():
     print(r"""
@@ -68,7 +69,7 @@ def show_menu():
     | )      | )   ( |/\____) |/\____) | _ | )   ( |   | |   
     |/       |/     \|\_______)\_______)(_)|/     \|   \_/   
                                                              
-    """)
+    Type "-h", "--help" for more information.""")
 
     print(r"""
 1) Generate Passwords
